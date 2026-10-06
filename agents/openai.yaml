@@ -1,0 +1,6 @@
+interface:
+  display_name: "人话 · Plain Voice"
+  short_description: "中文自媒体创作与编辑：六类严格表达规则、原意保护与错字歧义确认"
+  default_prompt: "使用 $plain-voice 轻改我的文案，保留事实和立场，明确笔误直接修复，关键歧义先确认。"
+policy:
+  allow_implicit_invocation: true
