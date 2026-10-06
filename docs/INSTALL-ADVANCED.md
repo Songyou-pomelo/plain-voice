@@ -2,15 +2,15 @@
 
 ## 下载
 
-- GitHub 仓库发布后：仓库页 **Code → Download ZIP**，解压后打开本目录。
-- 命令行：将下方 `YOUR-ACCOUNT` 替换为实际账号；仓库名若不同，一并替换。
+- 打开 [GitHub 仓库](https://github.com/Songyou-pomelo/plain-voice)，选择 **Code → Download ZIP**，解压后打开项目目录。
+- 或使用下面的命令下载：
 
 ```bash
-git clone https://github.com/YOUR-ACCOUNT/plain-voice.git
+git clone https://github.com/Songyou-pomelo/plain-voice.git
 cd plain-voice
 ```
 
-本项目尚未发布，以上是发布后的操作模板，不是已存在的下载地址。发布人可运行 `python scripts/package.py` 生成技能 ZIP，并上传 GitHub Release；下载者在对应 Release 的 Assets 下载 `plain-voice-skill-0.3.0.zip`。
+需要技能 ZIP 时，在项目目录运行 `python scripts/package.py`，生成 `dist/plain-voice-skill-0.3.0.zip`。若仓库提供 Release 附件，也可直接下载；源码上传不代表 Release 已发布。
 
 ## 安装
 

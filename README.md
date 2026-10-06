@@ -1,4 +1,4 @@
-# 人话 · Plain Voice
+# 自然表达 · Plain Voice
 
 面向中文自媒体的创作与编辑 Skill。支持有稿轻改、重构、诊断、查错字与无稿共创。
 
@@ -6,26 +6,26 @@
 
 当前版本 **0.3.0，预发布**。格式及辅助脚本已进行本地检查；跨模型创作行为尚未验收。不判断文字是不是 AI 写的，不保证流量，不承诺“零 AI 味”。
 
-## 安装：和普通 Skill 一样
+## 安装
 
 在要写稿的项目文件夹中打开终端，执行：
 
 ```bash
-npx skills add YOUR-ACCOUNT/plain-voice
+npx skills add Songyou-pomelo/plain-voice
 ```
 
-按提示选择正在使用的 AI 工具，安装到当前项目即可。之后在该工具中打开这个项目使用。需要电脑已安装 Node.js，首次安装需要联网。`YOUR-ACCOUNT` 是待替换的 GitHub 账号；仓库尚未发布，这条仓库命令目前是发布模板。
+按提示选择正在使用的 AI 工具，安装到当前项目即可。之后在该工具中打开这个项目使用。需要电脑已安装 Node.js，首次安装需要联网。仓库地址：[Songyou-pomelo/plain-voice](https://github.com/Songyou-pomelo/plain-voice)。
 
 需要在所选工具的所有项目使用时，加 `--global`：
 
 ```bash
-npx skills add YOUR-ACCOUNT/plain-voice --global
+npx skills add Songyou-pomelo/plain-voice --global
 ```
 
-本地已有本项目时，安装源换成本地文件夹：
+本地下载并解压后，也可以从项目的上级目录安装：
 
 ```powershell
-npx skills add "E:\Projects\plain-voice"
+npx skills add ./plain-voice
 ```
 
 命令使用开源 [Skills CLI](https://github.com/vercel-labs/skills)，支持选择 Codex、Claude Code 等工具。不要照抄其他项目的名称。此项目的 CLI 安装流程尚未实测。
@@ -41,7 +41,7 @@ npx skills add "E:\Projects\plain-voice"
 
 已有同名技能时先备份再替换。安装后重新打开项目或刷新技能列表。
 
-WorkBuddy 等提供技能导入入口的平台，按其入口导入 `dist/plain-voice-skill-0.3.0.zip`；具体支持以当前客户端为准。豆包等未提供 Skill 安装入口的聊天工具，复制 `prompts/universal.txt` 到新对话再发任务。
+有技能导入入口的平台，可导入技能 ZIP；先运行 `python scripts/package.py` 生成 `dist/plain-voice-skill-0.3.0.zip`。具体支持以当前客户端为准。豆包等未提供 Skill 安装入口的聊天工具，复制 `prompts/universal.txt` 到新对话再发任务。
 
 核心规则不需要 Python、API Key 或 RAG。Python 安装脚本及详细平台说明放在 [备用安装说明](docs/INSTALL-ADVANCED.md)，普通用户无需运行。
 
@@ -61,7 +61,7 @@ WorkBuddy 等提供技能导入入口的平台，按其入口导入 `dist/plain-
 
 ## VS Code 中使用
 
-1. **文件 → 打开文件夹**，选择此项目。或在终端运行 `code E:\Projects\plain-voice`（需安装 `code` 命令）。
+1. **文件 → 打开文件夹**，选择下载解压后的项目目录。或在项目目录中运行 `code .`（需安装 `code` 命令）。
 2. 打开 Markdown 文件，按 `Ctrl+Shift+V` 预览文档。
 3. 安装到创作项目后，通过已安装、已登录的 Codex／Claude Code 工具调用。VS Code 单独打开文本不会执行模型。
 4. `.vscode/tasks.json` 提供验证与打包任务，可在“终端 → 运行任务”使用；它们检查／打包文件，不自动生成文案。
